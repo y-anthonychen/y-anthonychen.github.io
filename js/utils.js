@@ -53,28 +53,39 @@ const Site = {
 
   /**
    * Render one paper card (shared by publications and working papers).
-   * Fields used: title, url, authors, publication, year, pdfPath, bibPath.
+   * Fields used: title, url, authors, publication, year, pdfPath, bibPath,
+   * imagePath (optional thumbnail/figure).
    */
   paperCard(paper) {
     const card = this.el("article", "paper");
 
+    if (paper.imagePath) {
+      const img = this.el("img", "paper-thumb");
+      img.src = paper.imagePath;
+      img.alt = "";
+      card.appendChild(img);
+    }
+
+    const body = this.el("div", "paper-body");
+
     const title = this.el("p", "paper-title");
     if (paper.url) title.appendChild(this.link(paper.url, paper.title));
     else title.textContent = paper.title;
-    card.appendChild(title);
+    body.appendChild(title);
 
     if (paper.authors) {
-      card.appendChild(this.el("p", "paper-authors", paper.authors));
+      body.appendChild(this.el("p", "paper-authors", paper.authors));
     }
 
     const venue = [paper.publication, paper.year].filter(Boolean).join(", ");
-    if (venue) card.appendChild(this.el("p", "paper-venue", venue));
+    if (venue) body.appendChild(this.el("p", "paper-venue", venue));
 
     const links = this.el("p", "paper-links");
     if (paper.pdfPath) links.appendChild(this.link(paper.pdfPath, "PDF"));
     if (paper.bibPath) links.appendChild(this.link(paper.bibPath, "BibTeX"));
-    if (links.childNodes.length) card.appendChild(links);
+    if (links.childNodes.length) body.appendChild(links);
 
+    card.appendChild(body);
     return card;
   },
 

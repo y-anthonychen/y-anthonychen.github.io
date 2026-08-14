@@ -1,0 +1,9 @@
+[
+  { "src": "./assets/images/scenery/ocean-sunset-pink.jpg", "alt": "Pink sunset clouds over breaking waves" },
+  { "src": "./assets/images/scenery/ocean-lighthouse.jpg", "alt": "Point Reyes Lighthouse above the Pacific at dusk" },
+  { "src": "./assets/images/scenery/ocean-waterfall-cove.jpg", "alt": "Waterfall into a turquoise cove, Big Sur" },
+  { "src": "./assets/images/scenery/ocean-rocky-shore.jpg", "alt": "Waves breaking on a rocky shore at dusk" },
+  { "src": "./assets/images/scenery/ocean-cairn.jpg", "alt": "Rock cairn on the coast under a clear sky" },
+  { "src": "./assets/images/scenery/ocean-sunset-fire.jpg", "alt": "Fiery orange sunset over the ocean" },
+  { "src": "./assets/images/scenery/ocean-cliff-grass.jpg", "alt": "Grassy cliff overlooking the ocean" }
+]

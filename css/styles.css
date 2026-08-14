@@ -1,29 +1,34 @@
 /* ==========================================================================
-   Minimal, presentable defaults for the academic website template.
-   The setup-site skill is expected to restyle this file from the user's
-   design references — treat everything here as a starting point.
+   Warm, airy academic theme: cream/beige background, sage accent,
+   all-sans typography. Inspired by minimal academic portfolio sites —
+   generous whitespace, quiet dividers instead of heavy boxes.
    ========================================================================== */
 
 :root {
-  --color-text: #1f2328;
-  --color-text-muted: #59636e;
-  --color-accent: #0b57d0;
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f6f8fa;
-  --color-border: #d9dee3;
+  --color-text: #2b2823;
+  --color-text-muted: #675e4e;
+  --color-accent: #4f7942;
+  --color-accent-dark: #3c5c32;
+  --color-bg: #faf5ec;
+  --color-bg-alt: #f1e8d8;
+  --color-card: #fffcf6;
+  --color-border: #e4d9c4;
   --max-width: 46rem;
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Lora", Georgia, "Times New Roman", serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-text: #e6edf3;
-    --color-text-muted: #9198a1;
-    --color-accent: #6ea8fe;
-    --color-bg: #0d1117;
-    --color-bg-subtle: #161b22;
-    --color-border: #30363d;
+    --color-text: #ede6d8;
+    --color-text-muted: #c2b89f;
+    --color-accent: #8fc17e;
+    --color-accent-dark: #a9d69a;
+    --color-bg: #211f1a;
+    --color-bg-alt: #2b2822;
+    --color-card: #2b2822;
+    --color-border: #3d392f;
   }
 }
 
@@ -31,29 +36,72 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--color-text);
   background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-accent);
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-dark);
   border-bottom: 1px solid var(--color-border);
-  padding-bottom: 0.35rem;
-  margin: 0 0 1rem;
+  padding-bottom: 0.6rem;
+  margin: 0 0 1.5rem;
+}
+
+h2.section-headline {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 0 0 1.75rem;
+}
+
+.subsection {
+  margin-bottom: 2.25rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsection h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-dark);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.6rem;
+  margin: 0 0 1.25rem;
 }
 
 img {
@@ -73,7 +121,7 @@ img {
 .site-nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0.6rem 1rem;
+  padding: 0.9rem 1.25rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -81,9 +129,17 @@ img {
 }
 
 .nav-name {
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
   color: var(--color-text);
   margin-right: auto;
+}
+
+.nav-name:hover {
+  text-decoration: none;
+  color: var(--color-accent-dark);
 }
 
 .nav-toggle {
@@ -100,20 +156,26 @@ img {
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.25rem 1rem;
+  gap: 0.25rem 1.5rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  font-weight: 500;
 }
 
 .nav-links a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
   text-decoration: none;
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--color-accent-dark);
 }
 
 @media (max-width: 700px) {
@@ -125,7 +187,8 @@ img {
     display: none;
     flex-basis: 100%;
     flex-direction: column;
-    gap: 0.4rem;
+    align-items: flex-start;
+    gap: 0.5rem;
     padding: 0.5rem 0;
   }
 
@@ -139,29 +202,44 @@ img {
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 1rem 3rem;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.main-about {
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 0;
+}
+
+.main-about #about {
+  margin-bottom: 0;
+  width: 100%;
 }
 
 .section {
-  margin-bottom: 2.5rem;
-  scroll-margin-top: 4rem;
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 4.5rem;
 }
 
 /* --- Profile ------------------------------------------------------------ */
 
 .profile {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  width: 168px;
+  height: 168px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 50%;
   flex-shrink: 0;
+  border: 1px solid var(--color-border);
 }
 
 .profile-body {
@@ -170,29 +248,156 @@ main {
 }
 
 .profile-body h1 {
-  margin: 0 0 0.2rem;
-  font-size: 1.7rem;
+  font-family: var(--font-heading);
+  margin: 0 0 0.35rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .profile-role {
-  color: var(--color-text-muted);
-  margin: 0 0 0.75rem;
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.1rem;
+}
+
+.profile-bio {
+  color: var(--color-text);
 }
 
 .profile-links {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem 1rem;
-  margin: 0.75rem 0 0;
+  gap: 0.4rem 1.25rem;
+  margin: 1rem 0 0;
   padding: 0;
+}
+
+.profile-links a {
+  color: var(--color-accent-dark);
+  font-weight: 500;
+}
+
+/* --- About page: divider + Latest Publications ---------------------------- */
+
+.about-subsection {
+  margin-top: 3rem;
+}
+
+.scenery-divider {
+  margin: 3rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.scenery-divider-img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .scenery-divider-img {
+    height: 150px;
+  }
+}
+
+/* --- Research page: small circular accent photos beside headings ---------- */
+/* Sits next to the heading only (never beside body text), so list/card
+   alignment below is never affected. */
+
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.section-heading-row h2 {
+  margin-bottom: 0;
+}
+
+.section-heading-row {
+  margin-bottom: 1.5rem;
+}
+
+.accent-photo-circle img {
+  display: block;
+  width: 6.5rem;
+  height: 6.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+}
+
+/* --- Research page: in-page sub-nav ---------------------------------------- */
+
+.page-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: -0.75rem 0 2.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-subnav a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.page-subnav a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+/* --- Conference presentations & awards: photo grid -------------------------- */
+/* Uniform grid, square cells via aspect-ratio + object-fit: cover — every row
+   and column edge lines up, regardless of each photo's original dimensions. */
+
+.presentations-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.presentations-collage img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 480px) {
+  .presentations-collage {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 700px) {
+  .presentations-collage {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* --- News ---------------------------------------------------------------- */
 
 .news-year h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.05rem;
+  margin: 1.25rem 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--color-text-muted);
 }
 
@@ -207,7 +412,7 @@ main {
 }
 
 .news-list li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
   padding-left: 0.25rem;
 }
 
@@ -217,64 +422,112 @@ main {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
   margin-right: 0.4rem;
 }
 
 /* --- Papers (publications + working papers) ------------------------------ */
 
 .paper {
-  padding: 0.85rem 1rem;
-  margin-bottom: 0.75rem;
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.paper:last-child {
+  border-bottom: none;
+}
+
+.paper-thumb {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
   border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+
+.paper-body {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 500px) {
+  .paper {
+    flex-direction: column;
+  }
+
+  .paper-thumb {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+  }
 }
 
 .paper-title {
+  font-family: var(--font-heading);
   font-weight: 600;
-  margin: 0 0 0.15rem;
+  font-size: 1.12rem;
+  margin: 0 0 0.25rem;
 }
 
 .paper-authors {
   margin: 0 0 0.15rem;
   font-size: 0.95rem;
+  color: var(--color-text);
 }
 
 .paper-venue {
   margin: 0;
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
+  font-size: 0.9rem;
   font-style: italic;
+  color: var(--color-text-muted);
 }
 
 .paper-links {
-  margin: 0.4rem 0 0;
-  font-size: 0.9rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.88rem;
   display: flex;
-  gap: 0.9rem;
+  gap: 1rem;
   flex-wrap: wrap;
+}
+
+.paper-links a {
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.78rem;
 }
 
 /* --- Generic item lists (talks, software, projects, teaching) ------------ */
 
 .item {
-  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.item:last-child {
+  border-bottom: none;
 }
 
 .item-title {
+  font-family: var(--font-heading);
   font-weight: 600;
+  font-size: 1.12rem;
   margin: 0;
 }
 
 .item-meta {
-  margin: 0;
-  font-size: 0.95rem;
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
   color: var(--color-text-muted);
 }
 
 .item-description {
-  margin: 0.2rem 0 0;
+  margin: 0.35rem 0 0;
   font-size: 0.95rem;
 }
 
@@ -282,8 +535,8 @@ main {
 
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--color-text-muted);
 }

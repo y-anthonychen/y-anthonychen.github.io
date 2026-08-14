@@ -1,16 +1,16 @@
 {
-  "name": "Dr. Jane Placeholder",
-  "title": "Assistant Professor of Something Interesting",
-  "affiliation": "University of Somewhere",
-  "photoPath": "./assets/images/headshot.svg",
+  "name": "Y. Anthony Chen",
+  "title": "Postdoctoral Scholar",
+  "affiliation": "Stanford University",
+  "photoPath": "./assets/images/headshot.jpg",
   "bio": [
-    "I am a researcher studying interesting things. My work combines methods from one field with questions from another to understand how the world works.",
-    "Before joining the University of Somewhere, I completed my Ph.D. at Another University, where I was advised by Prof. Great Mentor."
+    "I am a Postdoctoral Scholar at <a href='https://www.stanford.edu/' target='_blank'>Stanford University</a>'s Social Media Lab and <a href='https://tip.fsi.stanford.edu/' target='_blank'>Tech Impact and Policy Center</a>, where I study how technologies shape adolescent development, including their relationships, identity, and well-being. My work combines longitudinal surveys, passive sensing data, and experimental methods to understand the reciprocal relationship between digital media use and mental health across development. More recently, my research has turned toward the policies and interventions &mdash; from national-level regulation to technology-oriented interventions &mdash; that can help young people thrive in a digital world.",
+    "I completed my Ph.D. in Communication Science at the <a href='https://www.wisc.edu/' target='_blank'>University of Wisconsin&ndash;Madison</a> in 2023, and was previously a Postdoctoral Scholar in the Department of Psychology at <a href='https://uci.edu/' target='_blank'>UC Irvine</a>. My research has appeared in venues including <em>Communication Research</em>, <em>Journal of Computer-Mediated Communication</em>, <em>Developmental Psychology</em>, and <em>CHI</em>, and has been supported by the Jacobs Foundation, Hopelab, and the National Communication Association."
   ],
   "links": [
-    { "label": "Google Scholar", "url": "https://scholar.google.com/" },
-    { "label": "GitHub", "url": "https://github.com/" },
+    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=eg93zmOqIagC&hl=en" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/anthony-chen-a0a388288/" },
     { "label": "CV", "url": "./docs/cv.pdf" },
-    { "label": "Email", "url": "mailto:jane@example.edu" }
+    { "label": "Email", "url": "mailto:y.anthonychen@stanford.edu" }
   ]
 }

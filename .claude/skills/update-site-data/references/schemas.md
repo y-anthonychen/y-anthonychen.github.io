@@ -2,6 +2,8 @@
 
 Schemas and examples for every file under `data/`. Optional fields are marked; each file is rendered by the matching `js/*.js` module.
 
+> **Pages:** The site is split across two HTML pages sharing `css/styles.css` and `js/utils.js` + `js/site.js` (site chrome: title, nav name, footer, CV link). `index.html` is the About page: profile, a scenery-photo divider (first entry of `data/scenery.json`), and a short `data/latest_publications.json` highlight list. `research.html` groups Publications (full list) + Invited Talks + Conference Presentations & Awards (photo collage) under one "Research" headline with an in-page jump-nav, followed by Funding, and (currently empty) News/Projects/Software/Teaching further down. Working Papers has no section markup on either page right now (see note below) — add it back to bring it into the Research group.
+
 > **Note:** These schemas describe the template as shipped. If the site has been redesigned (via `/setup-site` or manually), the live `data/*.json` files and `js/*.js` renderers are the ground truth. When they diverge from this file, follow the code and update this file to match.
 
 ## data/profile.json — name, bio, links
@@ -25,12 +27,16 @@ Object. Rendered by `js/profile.js` (also sets the page title, nav name, and foo
 }
 ```
 
-- `bio` is an array of paragraphs.
+- `bio` is an array of paragraphs. Each paragraph is rendered as trusted HTML (like `news.json`'s `htmltext`): use single-quoted attributes, `<a href='URL' target='_blank'>` for hyperlinks (only for named entities with a real, verified URL — e.g. an institution or center homepage), and `<em>` for journal/venue names.
 - Optional: `photoPath` (omit to render without a photo).
 
-## data/publications.json — published papers
+## data/latest_publications.json — About page highlight list
 
-Array, ordered by year (newest first). Rendered by `js/publications.js`.
+Array, same shape as `data/publications.json` below (a subset — the site owner curates which entries appear here, e.g. skipping less prominent papers). Rendered by `js/latest_publications.js` on `index.html`.
+
+## data/publications.json — full journal article list
+
+Array, ordered by year (newest first). Rendered by `js/publications.js` on `research.html`.
 
 ```json
 {
@@ -45,12 +51,12 @@ Array, ordered by year (newest first). Rendered by `js/publications.js`.
 ```
 
 - `year` is a string. `url` is the canonical DOI/publisher link.
-- Optional: `pdfPath`, `bibPath` (links only render when present).
+- Optional: `pdfPath`, `bibPath` (links only render when present), `imagePath` (a thumbnail/figure shown beside the entry, e.g. `./assets/images/...`).
 - Shared-first-authorship is marked with `†` after author names.
 
 ## data/working_papers.json — preprints / under review
 
-Array, newest first. Rendered by `js/working_papers.js`.
+Array, newest first. Rendered by `js/working_papers.js`. Not currently included on either page (no `<section>`/script tag references it) — add a `working-papers` subsection back to `research.html` (matching the `publications`/`talks` subsection pattern) to bring it back.
 
 ```json
 {
@@ -64,7 +70,7 @@ Array, newest first. Rendered by `js/working_papers.js`.
 ```
 
 - `id` is a unique identifier: `modal_[lowercase_short_identifier]` (author name + key title word).
-- Optional: `pdfPath`, `bibPath`, `publication` (status note, e.g. `"Under review at Journal X"`).
+- Optional: `pdfPath`, `bibPath`, `publication` (status note, e.g. `"Under review at Journal X"`), `imagePath` (a thumbnail/figure shown beside the entry).
 
 ## data/news.json — news items
 
@@ -92,21 +98,41 @@ Array of year groups, newest year first; items within a year are newest first. R
   - Media: `<a>Outlet</a> covered our paper <a>Title</a>.`
   - Tool: `Created <a><code>name</code></a> — description.`
 
-## data/talks.json — talks and presentations
+## data/talks.json — invited talks (institution + date, no titles)
 
-Array, newest first. Rendered by `js/talks.js`.
+Array, newest first. Rendered by `js/talks.js` as a plain divider-list (institution name, date below it) — deliberately no talk titles, just the notable host institutions. Drop minor venues.
+
+```json
+{ "institution": "Stanford University", "date": "November 2023" }
+```
+
+- Optional: `date`.
+
+## data/presentations.json — conference/presentation photo collage
+
+Array of `{ src, alt }`, same shape as `data/scenery.json` below. Rendered by `js/presentations.js` as a CSS-columns masonry collage (each photo keeps its natural aspect ratio — no forced cropping, so mixed portrait/landscape photos all work) in the "Conference Presentations & Awards" subsection of `research.html`.
+
+## data/funding.json — funders
+
+Array. Rendered by `js/funding.js` as a divider-list: funder name, with the specific award/grant title (wording from the CV) hyperlinked to a relevant page.
 
 ```json
 {
-  "title": "A very important finding about an interesting phenomenon",
-  "location": "Workshop on Interesting Things, University of Somewhere",
-  "date": "2026",
-  "link": "https://example.edu"
+  "name": "Stanford Impact Labs",
+  "title": "Emerging Scholars Fellowship",
+  "url": "https://impact.stanford.edu/people/anthony-chen"
 }
 ```
 
-- `date` is a year string (a fuller date like `"March 2026"` also works).
-- Optional: `link` (title renders as plain text without it).
+- `url` is optional (title renders as plain text without it). No logos — text-only by design (logo sourcing was tried and abandoned; verified official logo assets weren't available for these funders).
+
+## data/scenery.json — About page photo(s)
+
+Array of `{ src, alt }`. Rendered by `js/scenery.js`: only the **first** photo is used, as a wide divider band between the bio and Latest Publications on `index.html`. The rest of the array is unused (kept so reordering/adding photos is just a JSON edit — moving a different entry to index 0 swaps the divider photo).
+
+```json
+{ "src": "./assets/images/scenery/ocean-sunset.jpg", "alt": "Sunset over the Pacific coast" }
+```
 
 ## data/software.json — software and tools
 

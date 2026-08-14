@@ -1,20 +1,148 @@
 [
   {
-    "title": "A very important finding about an interesting phenomenon",
-    "authors": "Jane Placeholder, Collaborator One, Collaborator Two",
-    "publication": "Journal of Important Findings",
-    "year": "2025",
-    "url": "https://doi.org/10.0000/example.2025",
-    "pdfPath": "./docs/publications/2025_Placeholder_ImportantFinding/2025_Placeholder_ImportantFinding.pdf",
-    "bibPath": "./docs/publications/2025_Placeholder_ImportantFinding/cite.bib"
+    "title": "When the algorithm understands you (or doesn't): LGBTQ+ youth's interaction with algorithmic media and identity formation",
+    "authors": "Y. A. Chen†, S. H. Taylor",
+    "publication": "Communication Research",
+    "year": "2026",
+    "url": "https://doi.org/10.1177/00936502261459750"
   },
   {
-    "title": "An earlier study that laid the groundwork",
-    "authors": "Jane Placeholder, Collaborator One",
-    "publication": "Proceedings of the Conference on Groundwork",
+    "title": "Curating digital coping ecologies: How queer emerging adults use social media to support their mental health",
+    "authors": "M. Liu*, C. LeFevre*, Y. A. Chen†",
+    "publication": "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems",
+    "year": "2026",
+    "url": "https://doi.org/10.1145/3772318.3790281"
+  },
+  {
+    "title": "Bidirectional relationships of parenting stress, media use for behavior management, and children's behavior problems from 9 to 30 months",
+    "authors": "S. M. Reich, R. Dore, A. Krager*, Y. A. Chen, K. Mayfield, D. Franza*, N. Cabrera",
+    "publication": "Developmental Psychology",
+    "year": "2026",
+    "url": "https://doi.org/10.1037/dev0002164"
+  },
+  {
+    "title": "Social media self-presentation of LGBTQ+ youth in the U.S.: The role of identity exploration, context collapse, and supportive feedback",
+    "authors": "Y. A. Chen†, M. L. Mares",
+    "publication": "Journal of Computer-Mediated Communication",
+    "year": "2025",
+    "url": "https://doi.org/10.1093/jcmc/zmaf020"
+  },
+  {
+    "title": "The combined well-being effects of social media activities: How self-affirmation can buffer against upward social comparisons on Instagram",
+    "authors": "Y. A. Chen†, C. L. Toma",
+    "publication": "Human Communication Research",
+    "year": "2025",
+    "url": "https://doi.org/10.1093/hcr/hqaf022"
+  },
+  {
+    "title": "A longitudinal study of directly observed social media posting: Association with socioemotional well-being during the transition to high school",
+    "authors": "A. Calvin, Y. A. Chen, E. Selkie",
+    "publication": "Computers in Human Behavior Reports",
+    "year": "2025",
+    "url": "https://doi.org/10.1016/j.chbr.2025.100748"
+  },
+  {
+    "title": "Negotiating parental support for LGBTQ identity: Media-based interactions across sociocultural contexts",
+    "authors": "Y. A. Chen, M. L. Mares",
+    "publication": "Psychology of Popular Media",
+    "year": "2025",
+    "url": "https://doi.org/10.1037/ppm0000602"
+  },
+  {
+    "title": "\"Anyway, I love you, text me please\": Exploring attachment, affordances, and support-seeking via texting",
+    "authors": "Y. A. Chen, A. Peebles, R. M. Lu*",
+    "publication": "Journal of Media Psychology",
+    "year": "2025",
+    "url": "https://doi.org/10.1027/1864-1105/a000469"
+  },
+  {
+    "title": "Media as a locus for family ethnic-racial socialization: US youth report on discussions and mutual mediation",
+    "authors": "M. L. Mares, A. McClain, N. Matins, M. Booth*, Y. A. Chen",
+    "publication": "Media Psychology",
     "year": "2024",
-    "url": "https://doi.org/10.0000/example.2024",
-    "pdfPath": "./docs/publications/2024_Placeholder_EarlierStudy/2024_Placeholder_EarlierStudy.pdf",
-    "bibPath": "./docs/publications/2024_Placeholder_EarlierStudy/cite.bib"
+    "url": "https://doi.org/10.1080/15213269.2024.2410770"
+  },
+  {
+    "title": "The Lonely Algorithm Problem: The relationship between algorithmic personalization and social connectedness on TikTok",
+    "authors": "S. H. Taylor, Y. A. Chen",
+    "publication": "Journal of Computer-Mediated Communication",
+    "year": "2024",
+    "url": "https://doi.org/10.1093/jcmc/zmae017"
+  },
+  {
+    "title": "Adolescents' mental health, problematic internet use, and their parents' rules on internet use: A latent profile analysis",
+    "authors": "Y. A. Chen, T. Fan*",
+    "publication": "Computers in Human Behavior",
+    "year": "2024",
+    "url": "https://doi.org/10.1016/j.chb.2024.108232"
+  },
+  {
+    "title": "To text or talk in person?: Social anxiety, media affordances, and preferences for texting over face-to-face communication in dating relationships",
+    "authors": "Y. A. Chen, C. L. Toma",
+    "publication": "Media Psychology",
+    "year": "2024",
+    "url": "https://doi.org/10.1080/15213269.2023.2246895"
+  },
+  {
+    "title": "Internet rules for me, problematic Internet use for them? The role of adolescent development and parent Internet practices on the parent-adolescent relationship",
+    "authors": "A. Peebles, Y. A. Chen",
+    "publication": "Journal of Social and Personal Relationships",
+    "year": "2024",
+    "url": "https://doi.org/10.1177/02654075231221581"
+  },
+  {
+    "title": "Texting or face-to-face for support-seeking in romantic relationships: The role of affordances and attachment",
+    "authors": "Y. A. Chen, R. M. Lu*",
+    "publication": "Journal of Social and Personal Relationships",
+    "year": "2024",
+    "url": "https://doi.org/10.1177/02654075231152910"
+  },
+  {
+    "title": "Mutual socialization during shared media moments: US LGBTQ teens and their parents negotiate identity support",
+    "authors": "M. L. Mares, Y. A. Chen, B. J. Bond",
+    "publication": "Journal of Communication",
+    "year": "2023",
+    "url": "https://doi.org/10.1093/joc/jqac046"
+  },
+  {
+    "title": "Disentangling between-person level from within-person level relationships: How sharing alcohol references on Facebook and alcohol use are associated over time",
+    "authors": "F. Geusens, Y. A. Chen, B. Kerr, M. A. Moreno",
+    "publication": "Media Psychology",
+    "year": "2022",
+    "url": "https://doi.org/10.1080/15213269.2022.2138443"
+  },
+  {
+    "title": "International students' psychosocial well-being and social media use at the onset of the COVID-19 pandemic: A latent profile analysis",
+    "authors": "Y. A. Chen†, T. Fan*, C. L. Toma, S. Scherr",
+    "publication": "Computers in Human Behavior",
+    "year": "2022",
+    "url": "https://doi.org/10.1016/j.chb.2022.107409"
+  },
+  {
+    "title": "Parasocial relationship and reduction of intergroup prejudice against the Chinese LGBT community: Intergroup anxiety and direct contact",
+    "authors": "Y. A. Chen, Y. B. Zhang",
+    "publication": "Communication Studies",
+    "year": "2022",
+    "url": "https://doi.org/10.1080/10510974.2022.2113415"
+  },
+  {
+    "title": "Mutual influence in LGBTQ teens' use of media to socialize their parents",
+    "authors": "M. L. Mares, Y. A. Chen, B. J. Bond",
+    "publication": "Media Psychology",
+    "year": "2022",
+    "url": "https://doi.org/10.1080/15213269.2021.1969950"
+  },
+  {
+    "title": "How does social media use relate to adolescents' internalizing symptoms? Conclusions from a systematic narrative review",
+    "authors": "I. G. Sarmiento, C. Olson, G. Yeo, Y. A. Chen, C. L. Toma, B. B. Brown, et al.",
+    "publication": "Adolescent Research Review",
+    "year": "2020",
+    "url": "https://doi.org/10.1007/s40894-018-0095-2"
+  },
+  {
+    "title": "Media coverage and social changes: Examining the valence of portrayal of the LGBT community from 2000 to 2014 in two U.S. magazines",
+    "authors": "Y. A. Chen",
+    "publication": "Intercultural Communication Studies",
+    "year": "2018"
   }
 ]

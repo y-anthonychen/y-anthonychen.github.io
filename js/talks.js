@@ -1,14 +1,9 @@
-/** Renders data/talks.json (array of talks, newest first). */
+/** Renders data/talks.json: institution + date, one per line. */
 Site.load("./data/talks.json", "talks-container", (container, talks) => {
-  talks.forEach(({ title, location, date, link }) => {
+  talks.forEach(({ institution, date }) => {
     const item = Site.el("div", "item");
-    const heading = Site.el("p", "item-title");
-    if (link) heading.appendChild(Site.link(link, title));
-    else heading.textContent = title;
-    item.appendChild(heading);
-
-    const meta = [location, date].filter(Boolean).join(" — ");
-    if (meta) item.appendChild(Site.el("p", "item-meta", meta));
+    item.appendChild(Site.el("p", "item-title", institution));
+    if (date) item.appendChild(Site.el("p", "item-meta", date));
     container.appendChild(item);
   });
 });

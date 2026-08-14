@@ -1,15 +1,5 @@
-/** Renders data/profile.json into the About section, nav, title, and footer. */
+/** Renders data/profile.json into the About section (photo, name, role, bio, links). */
 Site.load("./data/profile.json", "profile-container", (container, profile) => {
-  if (profile.name) {
-    document.title = profile.name;
-    const navName = document.getElementById("nav-name");
-    if (navName) navName.textContent = profile.name;
-    const footer = document.getElementById("footer-text");
-    if (footer) {
-      footer.textContent = `© ${new Date().getFullYear()} ${profile.name}`;
-    }
-  }
-
   const wrapper = Site.el("div", "profile");
 
   if (profile.photoPath) {
@@ -26,7 +16,11 @@ Site.load("./data/profile.json", "profile-container", (container, profile) => {
   if (role) body.appendChild(Site.el("p", "profile-role", role));
 
   (profile.bio || []).forEach((paragraph) => {
-    body.appendChild(Site.el("p", "profile-bio", paragraph));
+    const p = Site.el("p", "profile-bio");
+    // paragraph is trusted site-owner content from data/profile.json
+    p.innerHTML = paragraph;
+    p.querySelectorAll("a").forEach((a) => a.setAttribute("rel", "noopener"));
+    body.appendChild(p);
   });
 
   if (profile.links && profile.links.length) {

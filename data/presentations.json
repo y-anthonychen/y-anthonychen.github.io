@@ -1,0 +1,10 @@
+[
+  { "src": "./assets/images/presentations/talk-selfaffirmation.jpg", "alt": "Presenting research on self-affirmation and Instagram use" },
+  { "src": "./assets/images/presentations/award-nca-topPaper-solo.jpg", "alt": "NCA Top Paper Award certificate" },
+  { "src": "./assets/images/presentations/talk-lonelyalgorithm.jpg", "alt": "Presenting \"The Lonely Algorithm Problem\" at a conference" },
+  { "src": "./assets/images/presentations/award-ica-jakeliang.jpg", "alt": "ICA Human-Machine Communication Jake Liang Award certificate" },
+  { "src": "./assets/images/presentations/poster-alwaysconnected.jpg", "alt": "Poster presentation, \"Always Connected, Always Available\"" },
+  { "src": "./assets/images/presentations/award-nca-topPaper-group.jpg", "alt": "Accepting the NCA Top Paper Award with a co-author" },
+  { "src": "./assets/images/presentations/conference-group1.jpg", "alt": "With colleagues at a conference" },
+  { "src": "./assets/images/presentations/conference-group2.jpg", "alt": "With colleagues at a conference" }
+]

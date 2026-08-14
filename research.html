@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- The page title is also set from data/profile.json at load time -->
+  <title>Research</title>
+  <meta name="description" content="Research: publications, talks, presentations, and funding" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body data-page-title="Research">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-name" href="./index.html" id="nav-name"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="./index.html">About</a></li>
+        <li><a href="./research.html" aria-current="page">Research</a></li>
+        <li id="nav-cv-item" hidden><a id="nav-cv" href="#" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Every section below is rendered from a data/*.json file by its js/*.js module.
+         Do not hardcode content here: edit the JSON files instead.
+         A section with no data (missing/empty JSON) hides itself automatically. -->
+
+    <section id="research" class="section">
+      <div class="section-heading-row">
+        <h2 class="section-headline">Research</h2>
+        <div id="research-accent-photo" class="accent-photo-circle" hidden></div>
+      </div>
+
+      <nav class="page-subnav" aria-label="Research page sections">
+        <a href="#publications">Publications</a>
+        <a href="#talks">Invited Talks</a>
+        <a href="#presentations">Conference Presentations &amp; Awards</a>
+        <a href="#funding">Funding</a>
+      </nav>
+
+      <section id="publications" class="subsection" hidden>
+        <h3>Publications</h3>
+        <div id="publications-container"></div>
+      </section>
+
+      <section id="talks" class="subsection" hidden>
+        <h3>Invited Talks</h3>
+        <div id="talks-container"></div>
+      </section>
+
+      <section id="presentations" class="subsection" hidden>
+        <h3>Conference Presentations &amp; Awards</h3>
+        <div id="presentations-container" class="presentations-collage"></div>
+      </section>
+    </section>
+
+    <section id="funding" class="section" hidden>
+      <div class="section-heading-row">
+        <h2>Funding</h2>
+        <div id="funding-accent-photo" class="accent-photo-circle" hidden></div>
+      </div>
+      <div id="funding-container"></div>
+    </section>
+
+    <section id="news" class="section" hidden>
+      <h2>News</h2>
+      <div id="news-container"></div>
+    </section>
+
+    <section id="projects" class="section" hidden>
+      <h2>Ongoing Projects</h2>
+      <div id="projects-container"></div>
+    </section>
+
+    <section id="software" class="section" hidden>
+      <h2>Software</h2>
+      <div id="software-container"></div>
+    </section>
+
+    <section id="teaching" class="section" hidden>
+      <h2>Teaching</h2>
+      <div id="teaching-container"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footer-text"></p>
+  </footer>
+
+  <script src="./js/utils.js"></script>
+  <script src="./js/site.js"></script>
+  <script src="./js/scenery.js"></script>
+  <script src="./js/news.js"></script>
+  <script src="./js/publications.js"></script>
+  <script src="./js/ongoing_projects.js"></script>
+  <script src="./js/talks.js"></script>
+  <script src="./js/presentations.js"></script>
+  <script src="./js/funding.js"></script>
+  <script src="./js/software.js"></script>
+  <script src="./js/teaching.js"></script>
+</body>
+</html>
