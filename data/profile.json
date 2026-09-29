@@ -7,8 +7,10 @@
     "I am a Postdoctoral Scholar at <a href='https://www.stanford.edu/' target='_blank'>Stanford University</a>'s Social Media Lab and <a href='https://tip.fsi.stanford.edu/' target='_blank'>Tech Impact and Policy Center</a>, where I study how technologies shape adolescent development, including their relationships, identity, and well-being. My work combines longitudinal surveys, passive sensing data, and experimental methods to understand the reciprocal relationship between digital media use and mental health across development. More recently, my research has turned toward the policies and interventions &mdash; from national-level regulation to technology-oriented interventions &mdash; that can help young people thrive in a digital world.",
     "I completed my Ph.D. in Communication Science in the <a href='https://commarts.wisc.edu/' target='_blank'>Department of Communication Arts</a> at the University of Wisconsin&ndash;Madison in 2023, and was previously a Postdoctoral Scholar in the <a href='https://ps.soceco.uci.edu' target='_blank'>Department of Psychology</a> at UC Irvine, where I was affiliated with <a href='https://ceres-uci.org/index.html' target='_blank'>CERES</a>. My research has appeared in venues including <em>Communication Research</em>, <em>Journal of Computer-Mediated Communication</em>, <em>Developmental Psychology</em>, and <em>CHI</em>, and has been supported by the Jacobs Foundation, Hopelab, and the National Communication Association."
   ],
+  "note": "<strong>I'm on the job market</strong> and would welcome hearing about relevant opportunities.",
   "links": [
     { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=eg93zmOqIagC&hl=en", "icon": "scholar" },
+    { "label": "ORCID", "url": "https://orcid.org/0000-0002-6478-6722", "icon": "orcid" },
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/anthony-chen-a0a388288/", "icon": "linkedin" },
     { "label": "CV", "url": "./docs/cv.pdf", "icon": "cv" },
     { "label": "Email", "url": "mailto:y.anthonychen@stanford.edu", "icon": "email" }

@@ -13,6 +13,8 @@
   --color-bg-alt: #f1e8d8;
   --color-card: #fffcf6;
   --color-border: #e4d9c4;
+  --color-note-bg: #e8efdf;
+  --color-note-border: #b9cfa9;
   --max-width: 46rem;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -29,6 +31,8 @@
     --color-bg-alt: #2b2822;
     --color-card: #2b2822;
     --color-border: #3d392f;
+    --color-note-bg: #2a3325;
+    --color-note-border: #45573b;
   }
 }
 
@@ -297,6 +301,32 @@ main {
 .profile-icon-link svg {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.profile-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0;
+  padding: 0.8rem 1rem;
+  background: var(--color-note-bg);
+  border: 1px solid var(--color-note-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.profile-note svg {
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.1rem;
+  color: var(--color-accent-dark);
+}
+
+.profile-note strong {
+  color: var(--color-accent-dark);
 }
 
 /* --- About page: divider + Latest Publications ---------------------------- */
