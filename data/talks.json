@@ -1,8 +1,8 @@
 [
+  { "institution": "Stanford University", "date": "October 2026" },
   { "institution": "Pennsylvania State University", "date": "November 2025" },
   { "institution": "Harvard Graduate School of Education", "date": "December 2024" },
   { "institution": "University of Michigan", "date": "November 2024" },
   { "institution": "University of California, Davis", "date": "December 2023" },
-  { "institution": "Stanford University", "date": "November 2023" },
   { "institution": "University of Wisconsin–Madison", "date": "October 2022" }
 ]
