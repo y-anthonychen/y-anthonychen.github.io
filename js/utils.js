@@ -7,6 +7,9 @@
  * so removing/emptying a data file cleanly removes the section.
  */
 const Site = {
+  /** Site owner's name as written in author lists; bolded in paper cards. */
+  selfName: "Y. A. Chen",
+
   /**
    * Fetch a JSON data file. Returns null (instead of throwing) when the
    * file is missing or malformed so a broken file hides its section
@@ -74,7 +77,12 @@ const Site = {
     body.appendChild(title);
 
     if (paper.authors) {
-      body.appendChild(this.el("p", "paper-authors", paper.authors));
+      const authors = this.el("p", "paper-authors");
+      paper.authors.split(this.selfName).forEach((part, i) => {
+        if (i > 0) authors.appendChild(this.el("strong", "paper-self", this.selfName));
+        authors.appendChild(document.createTextNode(part));
+      });
+      body.appendChild(authors);
     }
 
     const venue = [paper.publication, paper.year].filter(Boolean).join(", ");

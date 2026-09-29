@@ -53,6 +53,7 @@ Array, ordered by year (newest first). Rendered by `js/publications.js` on `rese
 - `year` is a string. `url` is the canonical DOI/publisher link.
 - Optional: `pdfPath`, `bibPath` (links only render when present), `imagePath` (a thumbnail/figure shown beside the entry, e.g. `./assets/images/...`).
 - Shared-first-authorship is marked with `†` after author names.
+- The site owner's name (`Site.selfName` in `js/utils.js`, currently `Y. A. Chen`) is auto-bolded in `authors` on every paper card — write it exactly that way.
 
 ## data/working_papers.json — preprints / under review
 

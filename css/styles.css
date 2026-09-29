@@ -479,6 +479,10 @@ main {
   color: var(--color-text);
 }
 
+.paper-self {
+  font-weight: 700;
+}
+
 .paper-venue {
   margin: 0;
   font-size: 0.9rem;
