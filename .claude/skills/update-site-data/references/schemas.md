@@ -28,6 +28,7 @@ Object. Rendered by `js/profile.js` (also sets the page title, nav name, and foo
 ```
 
 - `bio` is an array of paragraphs. Each paragraph is rendered as trusted HTML (like `news.json`'s `htmltext`): use single-quoted attributes, `<a href='URL' target='_blank'>` for hyperlinks (only for named entities with a real, verified URL — e.g. an institution or center homepage), and `<em>` for journal/venue names.
+- Each `links` entry may set an optional `icon` (`scholar`, `linkedin`, `cv`, `email` — SVGs defined in `PROFILE_ICONS` in `js/profile.js`). With an icon, the link renders as that icon and `label` becomes its tooltip/aria-label; without one, `label` renders as text.
 - Optional: `photoPath` (omit to render without a photo).
 
 ## data/latest_publications.json — About page highlight list

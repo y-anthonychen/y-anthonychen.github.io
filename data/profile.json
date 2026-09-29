@@ -8,9 +8,9 @@
     "I completed my Ph.D. in Communication Science in the <a href='https://commarts.wisc.edu/' target='_blank'>Department of Communication Arts</a> at the University of Wisconsin&ndash;Madison in 2023, and was previously a Postdoctoral Scholar in the <a href='https://ps.soceco.uci.edu' target='_blank'>Department of Psychology</a> at UC Irvine, where I was affiliated with <a href='https://ceres-uci.org/index.html' target='_blank'>CERES</a>. My research has appeared in venues including <em>Communication Research</em>, <em>Journal of Computer-Mediated Communication</em>, <em>Developmental Psychology</em>, and <em>CHI</em>, and has been supported by the Jacobs Foundation, Hopelab, and the National Communication Association."
   ],
   "links": [
-    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=eg93zmOqIagC&hl=en" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/anthony-chen-a0a388288/" },
-    { "label": "CV", "url": "./docs/cv.pdf" },
-    { "label": "Email", "url": "mailto:y.anthonychen@stanford.edu" }
+    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=eg93zmOqIagC&hl=en", "icon": "scholar" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/anthony-chen-a0a388288/", "icon": "linkedin" },
+    { "label": "CV", "url": "./docs/cv.pdf", "icon": "cv" },
+    { "label": "Email", "url": "mailto:y.anthonychen@stanford.edu", "icon": "email" }
   ]
 }

@@ -272,6 +272,7 @@ main {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.4rem 1.25rem;
   margin: 1rem 0 0;
   padding: 0;
@@ -280,6 +281,22 @@ main {
 .profile-links a {
   color: var(--color-accent-dark);
   font-weight: 500;
+}
+
+.profile-icon-link {
+  display: inline-flex;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.profile-icon-link:hover,
+.profile-icon-link:focus-visible {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.profile-icon-link svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* --- About page: divider + Latest Publications ---------------------------- */
