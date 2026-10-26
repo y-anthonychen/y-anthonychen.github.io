@@ -1,1 +1,49 @@
-[]
+{
+  "courses": [
+    {
+      "title": "Online Communication & Personal Relationships",
+      "institution": "University of Wisconsin–Madison",
+      "icon": "relationships",
+      "roles": [
+        { "role": "Instructor", "term": "Spring 2021" },
+        { "role": "Teaching Assistant", "term": "Fall 2020" },
+        { "role": "Grader", "term": "4 semesters" }
+      ]
+    },
+    {
+      "title": "Introduction to Quantitative Research in Communication",
+      "institution": "University of Wisconsin–Madison",
+      "icon": "methods",
+      "roles": [
+        { "role": "Teaching Assistant", "term": "Fall 2022" },
+        { "role": "Teaching Assistant", "term": "Fall 2021" },
+        { "role": "Guest Lecturer", "term": "Undergraduate level" }
+      ]
+    },
+    {
+      "title": "Theory and Practice of Persuasion",
+      "institution": "University of Wisconsin–Madison",
+      "icon": "persuasion",
+      "roles": [
+        { "role": "Teaching Assistant", "term": "Spring 2023" }
+      ]
+    }
+  ],
+  "guest_lectures": [
+    {
+      "title": "Introduction to Communication",
+      "department": "Communication",
+      "institution": "Stanford University"
+    },
+    {
+      "title": "Social Computing",
+      "department": "Computer Science",
+      "institution": "Stanford University"
+    },
+    {
+      "title": "Seminar in Computer-Mediated Communication",
+      "department": "Graduate level",
+      "institution": "University of Wisconsin–Madison"
+    }
+  ]
+}

@@ -582,6 +582,114 @@ main {
   font-size: 0.95rem;
 }
 
+/* --- Teaching page: course cards ------------------------------------------ */
+
+.course-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Icon in a left column; title, institution and roles stack beside it. */
+.course-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.25rem;
+  align-items: start;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.25rem 1.4rem 1.1rem;
+}
+
+.course-card > :not(.course-icon) {
+  grid-column: 2;
+}
+
+.course-card > .course-icon {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+}
+
+.course-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--color-note-bg);
+  border: 1px solid var(--color-note-border);
+  color: var(--color-accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .course-card {
+    column-gap: 0.9rem;
+    padding: 1.1rem 1rem 1rem;
+  }
+
+  .course-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .course-icon svg {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
+
+/* Parts of the icons that pick up theme colors */
+.course-icon .icon-fill-bg {
+  fill: var(--color-note-bg);
+}
+
+.course-icon .icon-fill-accent {
+  fill: var(--color-accent);
+}
+
+.course-icon .icon-stroke-accent {
+  stroke: var(--color-accent);
+}
+
+.course-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.12rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.course-roles {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.course-roles li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.15rem 0;
+}
+
+.course-role {
+  font-weight: 600;
+}
+
+.course-term {
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
 /* --- Footer --------------------------------------------------------------- */
 
 .site-footer {

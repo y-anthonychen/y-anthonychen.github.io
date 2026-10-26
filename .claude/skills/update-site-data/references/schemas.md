@@ -160,21 +160,35 @@ Array. Rendered by `js/ongoing_projects.js`.
 }
 ```
 
-## data/teaching.json — courses taught
+## data/teaching.json — teaching page
 
-Array, newest first. Rendered by `js/teaching.js`.
+Object with two optional arrays. Rendered by `js/teaching.js` on `teaching.html`; an empty or missing array skips its subsection.
 
 ```json
 {
-  "title": "Introduction to Interesting Things",
-  "role": "Instructor",
-  "institution": "University of Somewhere",
-  "term": "Spring 2026",
-  "description": "An undergraduate introduction to the field."
+  "courses": [
+    {
+      "title": "Online Communication & Personal Relationships",
+      "institution": "University of Wisconsin–Madison",
+      "icon": "relationships",
+      "roles": [
+        { "role": "Instructor", "term": "Spring 2021" },
+        { "role": "Teaching Assistant", "term": "Fall 2020" }
+      ]
+    }
+  ],
+  "guest_lectures": [
+    {
+      "title": "Social Computing",
+      "department": "Computer Science",
+      "institution": "Stanford University"
+    }
+  ]
 }
 ```
 
-- Optional: `description`.
+- `courses`: icon cards ("Courses"), in display order. `icon` is a key in `TEACHING_ICONS` in `js/teaching.js` (currently `relationships`, `methods`, `persuasion`); an unknown key just omits the icon. Optional: `description`, `institution`.
+- `guest_lectures`: simple list ("Guest Lectures"). `department` can also hold a level, e.g. "Graduate level".
 
 ## docs/publications/ directory convention
 

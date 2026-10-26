@@ -6,10 +6,11 @@ A JSON-driven personal academic website: vanilla HTML/CSS/JS, no build step, dep
 
 **Content lives in `data/*.json`, never in HTML.** Each section is rendered client-side by a matching `js/*.js` module via the `Site.load` helper in `js/utils.js`. A section whose data file is missing, empty, or malformed hides itself silently.
 
-The site is two pages sharing `css/styles.css`, `js/utils.js`, and `js/site.js` (site chrome: page title, nav name, footer, CV nav link — runs on every page):
+The site is three pages sharing `css/styles.css`, `js/utils.js`, and `js/site.js` (site chrome: page title, nav name, footer, CV nav link — runs on every page):
 
 - `index.html` — About page: profile, a scenery-photo divider (one photo), and a short curated publication highlight list. Deliberately spare.
-- `research.html` — Publications, Invited Talks, and a Conference Presentations & Awards photo collage render under one "Research" headline as subsections, with an in-page jump-nav to navigate between them; Funding follows, then News, Working Papers, Projects, Software, and Teaching (currently empty/unused) further down.
+- `research.html` — Publications, Invited Talks, and a Conference Presentations & Awards photo collage render under one "Research" headline as subsections, with an in-page jump-nav to navigate between them; Funding follows, then News, Working Papers, Projects, and Software further down.
+- `teaching.html` — Teaching: course cards with custom SVG icons, and guest lectures.
 
 | Section | Data file | Renderer | Page |
 | --- | --- | --- | --- |
@@ -24,7 +25,7 @@ The site is two pages sharing `css/styles.css`, `js/utils.js`, and `js/site.js` 
 | Working papers | `data/working_papers.json` | `js/working_papers.js` | not on either page currently |
 | Ongoing projects | `data/ongoing_projects.json` | `js/ongoing_projects.js` | `research.html` |
 | Software | `data/software.json` | `js/software.js` | `research.html` |
-| Teaching | `data/teaching.json` | `js/teaching.js` | `research.html` |
+| Teaching | `data/teaching.json` | `js/teaching.js` | `teaching.html` |
 
 Schemas are documented in `.claude/skills/update-site-data/references/schemas.md`. If you change a schema or renderer, update that file in the same session.
 

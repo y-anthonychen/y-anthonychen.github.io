@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- The page title is also set from data/profile.json at load time -->
+  <title>Teaching</title>
+  <meta name="description" content="Teaching: signature courses, courses, and guest lectures" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body data-page-title="Teaching">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-name" href="./index.html" id="nav-name"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="./index.html">About</a></li>
+        <li><a href="./research.html">Research</a></li>
+        <li><a href="./teaching.html" aria-current="page">Teaching</a></li>
+        <li id="nav-cv-item" hidden><a id="nav-cv" href="#" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Rendered from data/teaching.json by js/teaching.js. Edit the JSON, not this file. -->
+    <section id="teaching" class="section" hidden>
+      <h2 class="section-headline">Teaching</h2>
+      <div id="teaching-container"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footer-text"></p>
+  </footer>
+
+  <script src="./js/utils.js"></script>
+  <script src="./js/site.js"></script>
+  <script src="./js/teaching.js"></script>
+</body>
+</html>
